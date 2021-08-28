@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    tools:context=".view.MenuFragment">
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/home"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/home"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/like"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/like"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/info"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/info"/>
+
+
+</LinearLayout>
