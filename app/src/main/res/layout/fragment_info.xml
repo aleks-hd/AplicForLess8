@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.InfoFragment">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_view_container"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="INFO"
-        android:textSize="50sp"/>
+        android:id="@+id/id_film"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:textSize="10sp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/name_film"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Имя"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/despription_film"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="описание"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+</LinearLayout>

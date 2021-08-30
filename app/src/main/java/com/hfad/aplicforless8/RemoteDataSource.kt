@@ -13,12 +13,13 @@ class RemoteDataSource {
         .baseUrl("https://api.themoviedb.org/3/")
         .addConverterFactory(
             GsonConverterFactory.create(
-                GsonBuilder().setLenient().create()
-            )
-        ).build().create(FilmAPI::class.java)
 
-    fun getFilmsAPI (callback: Callback<List<Films>>){
-        filmsAPI.getListFilms("en-US","1")
+            )
+        )
+        .build().create(FilmAPI::class.java)
+
+    fun getFilmsAPI (callback: Callback<Films>){
+        filmsAPI.getListFilms("26c76063ddc0678e825b62a173a38f08","en-US","1")
             .enqueue(callback)
 
     }
