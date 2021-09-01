@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hfad.aplicforless8.MainAdapter
+import com.hfad.aplicforless8.model.adapter.MainAdapter
 import com.hfad.aplicforless8.R
 import com.hfad.aplicforless8.viewmodel.AppState
 import com.hfad.aplicforless8.databinding.FragmentMainBinding

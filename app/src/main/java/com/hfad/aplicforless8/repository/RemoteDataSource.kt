@@ -1,6 +1,5 @@
-package com.hfad.aplicforless8
+package com.hfad.aplicforless8.repository
 
-import com.google.gson.GsonBuilder
 import com.hfad.aplicforless8.model.Films
 import retrofit2.Callback
 import retrofit2.Retrofit

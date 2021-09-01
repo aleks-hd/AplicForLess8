@@ -1,6 +1,6 @@
 package com.hfad.aplicforless8.model
 
-import com.hfad.aplicforless8.RemoteDataSource
+import com.hfad.aplicforless8.repository.RemoteDataSource
 import retrofit2.Callback
 
 

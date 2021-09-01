@@ -5,10 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.hfad.aplicforless8.MainAdapter
 import com.hfad.aplicforless8.R
 import com.hfad.aplicforless8.databinding.FragmentMenuBinding
-import com.hfad.aplicforless8.model.ResulltFilm
 
 
 class MenuFragment : Fragment(){

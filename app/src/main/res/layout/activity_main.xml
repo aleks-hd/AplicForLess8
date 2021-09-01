@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.MainActivity">
+    android:layout_height="match_parent">
 
 
-    <LinearLayout
-        android:id="@+id/main_container_fragment"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_weight="10"
-        android:layout_height="@dimen/zero"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
-        android:id="@+id/menu_container_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/zero"
-        android:layout_weight="1"
-        android:orientation="vertical"></LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/contant_main"/>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.hfad.aplicforless8
+package com.hfad.aplicforless8.model.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
+import com.hfad.aplicforless8.R
 import com.hfad.aplicforless8.model.ResulltFilm
 
 class MainAdapter() : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
@@ -29,7 +30,7 @@ class MainAdapter() : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         )
     }
 
-    override fun onBindViewHolder(holder: MainAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val fimltime = listFilms.get(position)
         holder.bind(fimltime)
         /* holder.itemView.setOnClickListener (object : View.OnClickListener{
