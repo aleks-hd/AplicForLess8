@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+        android:orientation="horizontal"
     tools:context=".view.SettingFragment">
 
-
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ТУТ бУДУТ НАСТРОЙКИ точно! но чуть позже! совсем чуть-чуть"
-        android:textSize="50sp"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-       android:id="@+id/closeFragment"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Закрой меня пока"/>
-</FrameLayout>
+        android:text="Включить взросный конент" />
+
+    <Switch
+        android:id="@+id/switch_18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

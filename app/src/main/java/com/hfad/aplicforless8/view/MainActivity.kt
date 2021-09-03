@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getSearchFilm(name: String?) {
 //тут будет функция для поиска фильмов
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
