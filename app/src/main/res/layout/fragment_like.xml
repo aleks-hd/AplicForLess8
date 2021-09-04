@@ -6,10 +6,11 @@
     tools:context=".view.LikeFragment">
 
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/container_localDB_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="50sp"
-        android:text="LIKE" />
+        android:layout_height="wrap_content"
+        />
+
 
 </FrameLayout>

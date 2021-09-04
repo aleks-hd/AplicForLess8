@@ -3,6 +3,7 @@ package com.hfad.aplicforless8.model.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
@@ -12,7 +13,7 @@ import com.hfad.aplicforless8.model.ResulltFilm
 
 class MainAdapter() : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
-    private lateinit var clickHandler: ClickEventHandler
+     lateinit var clickHandler: ClickEventHandler
     private var listFilms: List<ResulltFilm> = listOf()
 
     fun setFilms(data: List<ResulltFilm>){
@@ -42,9 +43,14 @@ class MainAdapter() : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
                      .commit()
              }
          })*/
-        holder.itemView.setOnClickListener {
+
+
+       /* holder.itemView.findViewById<AppCompatImageView>(R.id.image_container)
+            .setOnClickListener {
             clickHandler.forwardClick(fimltime)
-        }
+        }*/
+
+
 
     }
 
@@ -53,7 +59,7 @@ class MainAdapter() : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         return listFilms.size
     }
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+  inner  class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         fun bind(film: ResulltFilm){
             itemView.findViewById<TextView>(R.id.id_film).text = film.id.toString()
@@ -61,13 +67,21 @@ class MainAdapter() : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
             val pictures = film.poster_path.toString()
             itemView.findViewById<AppCompatImageView>(R.id.image_container)
                 .load("https://image.tmdb.org/t/p/w200${pictures}")
+           var likes =  itemView.findViewById<ImageView>(R.id.imageSaveDB)
 
-
+           var imageFilm = itemView.findViewById<AppCompatImageView>(R.id.image_container)
+           likes.setOnClickListener {
+               clickHandler.saveFilm(film)
+           }
+           imageFilm.setOnClickListener {
+               clickHandler.forwardClick(film)
+           }
         }
 
     }
 
     interface ClickEventHandler  {
         fun forwardClick(film: ResulltFilm)
+        fun saveFilm(film: ResulltFilm)
     }
 }

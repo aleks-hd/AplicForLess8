@@ -64,10 +64,16 @@ class MainFragment : Fragment() {
                     ?.commit()
             }
 
+            override fun saveFilm(film: ResulltFilm) {
+               viewModel.saveFilmToDB(film)
+                Toast.makeText(context,"Save", Toast.LENGTH_SHORT).show()
+            }
+
         })
         viewModel.getDataFromServer()
         binding.sendToServer.setOnClickListener {
         }
+
 
 
     }
@@ -82,7 +88,7 @@ class MainFragment : Fragment() {
         }
     }
 
-    //array
+    //array проверка на abult
     private fun setData(listFilms1: Films?) {
 
         val idFilm = listFilms1?.results

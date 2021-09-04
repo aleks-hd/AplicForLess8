@@ -2,24 +2,29 @@ package com.hfad.aplicforless8.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import com.hfad.aplicforless8.model.*
 import com.hfad.aplicforless8.repository.RemoteDataSource
-import com.hfad.aplicforless8.model.RepositoryIml
-import com.hfad.aplicforless8.model.Films
+import com.hfad.aplicforless8.room.App
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class MainViewModel(
     private val liveDataToObsrver: MutableLiveData<AppState> = MutableLiveData(),
+    private val historyRepository: LocalRepository = RepositoryLocalIml(App.getHistoryDao()),
     val repositoryIml: RepositoryIml = RepositoryIml(RemoteDataSource())
 ) {
     fun getLiveData() = liveDataToObsrver
 
     fun getDataFromServer() {
-
         repositoryIml.getFilmsFromServer(callback)
-
     }
+
+    fun saveFilmToDB(film: ResulltFilm){
+        historyRepository.saveEntity(film)
+    }
+
+
 
     private val callback = object : Callback<Films> {
         override fun onResponse(call: Call<Films>,
