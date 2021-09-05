@@ -31,7 +31,7 @@ class MenuFragment : Fragment(){
             openLikeFragment()
         }
         binding.info.setOnClickListener {
-           // openInfoFragment()
+           openContactFragment()
         }
     }
 
@@ -50,13 +50,13 @@ class MenuFragment : Fragment(){
             ?.commit()
     }
 
-   /* private fun openInfoFragment() {
+    private fun openContactFragment() {
 
         activity?.supportFragmentManager?.beginTransaction()
-            ?.disallowAddToBackStack()
-            ?.replace(R.id.main_container_fragment, InfoFragment())
+            ?.addToBackStack(null)
+            ?.replace(R.id.main_container_fragment, ContFragment.newInstance())
             ?.commit()
-    }*/
+    }
 
     companion object {
         fun newInstance() = MenuFragment()

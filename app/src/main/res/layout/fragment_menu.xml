@@ -27,7 +27,8 @@
         android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:src="@drawable/info"/>
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:src="@android:drawable/ic_menu_call"/>
 
 
 </LinearLayout>
